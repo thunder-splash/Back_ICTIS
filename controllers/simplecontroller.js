@@ -36,6 +36,9 @@ const createTable = (sdata) => {
 
 const formatData = (column, cvalue) => {
     var adata = data.filter(function(item) {
+        if (column === 'BIRTHDATE') {
+            return convertExcelDate(item[column]).toLocaleDateString() && convertExcelDate(item[column]).toLocaleDateString() === cvalue.toString()
+        }
         return item[column] && item[column].toString() === cvalue.toString();
     });
     return createTable(adata)
