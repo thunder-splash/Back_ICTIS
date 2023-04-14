@@ -1,2 +1,2 @@
-*node_modules/*
-*Sample.xlsx/*
+node_modules/
+Sample.xlsx
